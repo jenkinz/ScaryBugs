@@ -16,6 +16,7 @@
 		D59607C115EAE2370093A6F4 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D59607BF15EAE2370093A6F4 /* MainStoryboard.storyboard */; };
 		D59607C415EAE2370093A6F4 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D59607C315EAE2370093A6F4 /* MasterViewController.m */; };
 		D59607C715EAE2370093A6F4 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D59607C615EAE2370093A6F4 /* DetailViewController.m */; };
+		D59607D115EAE79D0093A6F4 /* ScaryBugData.m in Sources */ = {isa = PBXBuildFile; fileRef = D59607D015EAE79D0093A6F4 /* ScaryBugData.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		D59607C315EAE2370093A6F4 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
 		D59607C515EAE2370093A6F4 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
 		D59607C615EAE2370093A6F4 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		D59607CF15EAE79D0093A6F4 /* ScaryBugData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScaryBugData.h; sourceTree = "<group>"; };
+		D59607D015EAE79D0093A6F4 /* ScaryBugData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScaryBugData.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,13 +83,8 @@
 		D59607B315EAE2360093A6F4 /* ScaryBugs */ = {
 			isa = PBXGroup;
 			children = (
-				D59607BC15EAE2370093A6F4 /* AppDelegate.h */,
-				D59607BD15EAE2370093A6F4 /* AppDelegate.m */,
-				D59607BF15EAE2370093A6F4 /* MainStoryboard.storyboard */,
-				D59607C215EAE2370093A6F4 /* MasterViewController.h */,
-				D59607C315EAE2370093A6F4 /* MasterViewController.m */,
-				D59607C515EAE2370093A6F4 /* DetailViewController.h */,
-				D59607C615EAE2370093A6F4 /* DetailViewController.m */,
+				D59607CE15EAE7580093A6F4 /* Model */,
+				D59607CD15EAE71B0093A6F4 /* GUI */,
 				D59607B415EAE2360093A6F4 /* Supporting Files */,
 			);
 			path = ScaryBugs;
@@ -101,6 +99,29 @@
 				D59607BB15EAE2370093A6F4 /* ScaryBugs-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D59607CD15EAE71B0093A6F4 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				D59607BC15EAE2370093A6F4 /* AppDelegate.h */,
+				D59607BD15EAE2370093A6F4 /* AppDelegate.m */,
+				D59607BF15EAE2370093A6F4 /* MainStoryboard.storyboard */,
+				D59607C215EAE2370093A6F4 /* MasterViewController.h */,
+				D59607C315EAE2370093A6F4 /* MasterViewController.m */,
+				D59607C515EAE2370093A6F4 /* DetailViewController.h */,
+				D59607C615EAE2370093A6F4 /* DetailViewController.m */,
+			);
+			name = GUI;
+			sourceTree = "<group>";
+		};
+		D59607CE15EAE7580093A6F4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D59607CF15EAE79D0093A6F4 /* ScaryBugData.h */,
+				D59607D015EAE79D0093A6F4 /* ScaryBugData.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,6 +191,7 @@
 				D59607BE15EAE2370093A6F4 /* AppDelegate.m in Sources */,
 				D59607C415EAE2370093A6F4 /* MasterViewController.m in Sources */,
 				D59607C715EAE2370093A6F4 /* DetailViewController.m in Sources */,
+				D59607D115EAE79D0093A6F4 /* ScaryBugData.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,8 +7,9 @@
 //
 
 #import "MasterViewController.h"
-
 #import "DetailViewController.h"
+#import "ScaryBugDoc.h"
+#import "ScaryBugData.h"
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
@@ -16,6 +17,8 @@
 @end
 
 @implementation MasterViewController
+
+@synthesize bugs = _bugs;
 
 - (void)awakeFromNib
 {
@@ -30,6 +33,8 @@
 
     UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
     self.navigationItem.rightBarButtonItem = addButton;
+    
+    self.title = @"Scary Bugs";
 }
 
 - (void)viewDidUnload
@@ -40,7 +45,7 @@
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
-    return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
+    return YES;
 }
 
 - (void)insertNewObject:(id)sender
@@ -62,15 +67,17 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return _bugs.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell"];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MyBasicCell"];
 
-    NSDate *object = [_objects objectAtIndex:indexPath.row];
-    cell.textLabel.text = [object description];
+    ScaryBugDoc *bug = [self.bugs objectAtIndex:indexPath.row];
+    cell.textLabel.text = bug.data.title;
+    cell.imageView.image = bug.thumbImage;
     return cell;
 }
 
